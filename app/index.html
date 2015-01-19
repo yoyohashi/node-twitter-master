@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <title>闇ツイート自動回収アプリt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="components/appframework/afui.custom.css">
+  <link rel="stylesheet" type="text/css" href="components/appframework/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/apps.css">
+</head>
+<body bgcolor="#dc143c" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+  <!-- アプリ全体 -->
+  <div id="afui" class="ios7">
+    <!-- 各画面共通に利用されるヘッダ -->
+    <div id="header">
+      <a id="menubadge" onclick="af.ui.toggleRightSideMenu()" class="menuButton"></a>
+    </div>
+
+    <!-- コンテンツ領域 -->
+    <div id="content">
+      <!-- ホーム画面 -->
+      <div id="timeline" data-title="ホーム" class="panel">
+        <h2>不穏ツイート自動回収アプリ</h2>
+        <p>
+          だれかに愚痴りたいそんな人にオススメしたいアプリ
+        </p>
+        <center>
+          <ul class="list inset">
+            <li><a href="#dtweet">不穏ツイート</a></li>
+            <li><a href="#tweet">平常ツイート</a></li>
+            </ul>
+          </center>
+        </div>
+
+        <!-- 闇ツイート -->
+        <div id="dtweet" data-title="不穏ツイート" class="panel">
+          <form action="/test" method = "GET" name="message">
+            <p>不穏：<input type="text" name="message" value="" /></p>
+            <p><input type="submit" value="Tweet!" /></p>
+            <a class="button" onclick="submit" style="float: right">Tweet</a>
+          </form>
+          </div>
+
+          <!-- ツイート -->
+          <div id="tweet" data-title="平常ツイート" class="panel">
+            <p>
+              光：<input type="text" name="notekl">
+            </p>
+            <a class="button" onclick="submit" style="float: right">Tweet</a>
+          </div>
+
+          <div id="secret" data-title="秘密のへや" class="panel">
+            <p>
+
+
+        <!-- サイドバー -->
+        <aside id="main-nav">
+          <ul class="list">
+            <li class="divider">不穏ツイート自動回収アプリ</li>
+            <li><a href="#timeline">メニュー</a></li>
+            <li><a href="#dtweet">不穏ツイート</a></li>
+            <li><a href="#tweet">平常ツイート</a></li>
+            <li><a href="#secret">秘密のへや</a></li>
+          </ul>
+        </aside>
+
+      </div>
+      <script src="components/appframework/appframework.ui.min.js"></script>
+    </body>
+    </html>
